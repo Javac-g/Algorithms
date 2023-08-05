@@ -1,5 +1,7 @@
 package Searching.BinarySearch;
 
+import java.util.Arrays;
+
 public class Main {
     public static  int recursiveBinarySearch(int[] arr,int left , int right , int x){
         if (right >= left){
@@ -15,7 +17,9 @@ public class Main {
         }
         return -1;
     }
+
     public static int binarySearch(int[] arr, int x){
+
         int left = 0 , right = arr.length-1;
         while(left <= right){
             int middle = left + (right - left) / 2;

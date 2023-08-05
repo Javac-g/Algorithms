@@ -24,10 +24,25 @@ public class Main {
         }
 
     }
+    public static void sentinel_search(int[] arr, int N , int x){
+        int last = arr[N-1];
+        arr[N-1] = x;
+        int i = 0;
+        while(arr[i] != x){
+            i++;
+        }
+        arr[N-1] = last;
+
+        if ((i < N -1 || arr[N - 1] == x)){
+            System.out.println(x  + " is present at index: " + i);
+        }else {
+            System.out.println("Element not found");
+        }
+    }
     public static void main(String...args){
         int[] arr = {10,20,30,40,50,70,80,90,100};
         int N = arr.length;
         int X = 100;
-        sentinelSearch(arr,N,X);
+        sentinel_search(arr,N,X);
     }
 }
